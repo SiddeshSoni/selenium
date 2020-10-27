@@ -13,8 +13,12 @@ def select_values(Optionlist,value):
                     ele.click()
                     break
     else:
-        for ele in drop_down_list:                 #for all element selection
-            ele.click()
+        try:
+
+            for ele in drop_down_list:                 #for all element selection
+                ele.click()
+        except Exception as e:
+            print(e)
     #if ele.text == value:                         #for only one element selection
                 #ele.click()
                 #break
@@ -43,9 +47,6 @@ select_values(drop_down_list,value_list)                          #Function call
 
 #select_values(drop_down_list, 'choice 3')                        #If we want to select a particular choice in the list
 #select_values(drop_down_list, 'choice 6 2 1')                    #Same as above
-
-
-
 
 
 
